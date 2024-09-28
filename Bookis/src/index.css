@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.hover-overlay {
+  @apply absolute h-0 bottom-0 opacity-0 bg-black flex items-center justify-center text-white text-2xl font-bold transition-all duration-300 ease-in-out;
+}
+.parent:hover .hover-overlay {
+  @apply h-full opacity-100 bg-opacity-80 transition-all duration-700 ease-in-out;
+}
+
+.book-open {
+  animation: bookOpen 0.7s ease forwards;
+}
+.book-close {
+  animation: bookClose 0.7s ease forwards;
+}
+
+@keyframes bookOpen {
+  0% {
+    transform: rotateY(90deg) scale(0.9); /* Slight scale down */
+    opacity: 0;
+  }
+  60% {
+    transform: rotateY(30deg) scale(1.05); /* Slightly scale up */
+  }
+  100% {
+    transform: rotateY(0deg) scale(1); /* Final position */
+    opacity: 1;
+  }
+}
+
+@keyframes bookClose {
+  0% {
+    transform: rotateY(0deg) scale(1); /* Start position */
+    opacity: 1;
+  }
+  60% {
+    transform: rotateY(-30deg) scale(1.05); /* Slightly scale up */
+  }
+  100% {
+    transform: rotateY(90deg) scale(0.9); /* Slight scale down */
+    opacity: 0;
+  }
+}
