@@ -19,5 +19,5 @@ Bookis is an online bookstore where users can browse and purchase popular physic
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/bookis.git
+   git clone https://github.com/soltanAmen/Bookis.git
 
